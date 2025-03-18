@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndMaui.FormularioPeticion"
+             Title="FormularioPeticion">
+
+    <ScrollView>
+        <Grid RowDefinitions="Auto, *, Auto">
+            <!-- Navbar Superior -->
+            <Grid Grid.Row="0" BackgroundColor="#EBEBEF" HeightRequest="60">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Sección izquierda: Botón y labels de usuario -->
+                <HorizontalStackLayout Grid.Column="0" Spacing="10" Padding="20,0,0,0" VerticalOptions="Center" HorizontalOptions="Start">
+                    <ImageButton Source="user.png"
+                    BackgroundColor="Transparent"
+                    VerticalOptions="Center" 
+                    WidthRequest="30"
+                    HeightRequest="30"/>
+                    <VerticalStackLayout VerticalOptions="Center">
+                        <Label Text="Maria Torres" FontSize="10" />
+                        <Label Text="Heredia, Cr" FontSize="10" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+                <!-- Botón de notificación a la derecha -->
+                <ImageButton Grid.Column="1"
+                Source="bell.png"
+                BackgroundColor="Transparent"
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                Margin="0,0,20,0"
+                WidthRequest="12"
+                HeightRequest="12"
+                MinimumWidthRequest="12"
+                MinimumHeightRequest="12"/>
+            </Grid>
+
+            <!-- Formulario -->
+            <Frame Grid.Row="1" Padding="10">
+                <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
+
+                    <!-- Título -->
+                    <Label Text="Nueva Petición" Grid.Row="0" FontSize="18" FontAttributes="Bold" />
+
+                    <!-- Entrada de Servicio -->
+                    <VerticalStackLayout Grid.Row="1">
+                        <Label Text="Servicio" />
+                        <Entry Placeholder="Escribe aquí..." />
+                    </VerticalStackLayout>
+
+                    <!-- Entrada de Subcategoría -->
+                    <VerticalStackLayout Grid.Row="2">
+                        <Label Text="Subcategoría" />
+                        <Picker x:Name="myPicker" Title="Elige una opción">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Opción 1</x:String>
+                                    <x:String>Opción 2</x:String>
+                                    <x:String>Opción 3</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </VerticalStackLayout>
+
+                    <!-- Horarios Disponibles -->
+                    <VerticalStackLayout Grid.Row="3">
+                        <Label Text="Horarios disponibles" FontSize="16" FontAttributes="Bold"/>
+
+                        <!-- Días y horarios -->
+                        <VerticalStackLayout Spacing="5">
+                            <HorizontalStackLayout>
+                                <CheckBox IsChecked="false" />
+                                <Label Text="Lunes" VerticalOptions="Center"/>
+                                <Label Text="Hora de inicio:" />
+                                <TimePicker Format="HH:mm" />
+                                <Label Text="Hora de fin:" />
+                                <TimePicker Format="HH:mm" />
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout>
+                                <CheckBox IsChecked="false" />
+                                <Label Text="Martes" VerticalOptions="Center"/>
+                                <Label Text="Hora de inicio:" />
+                                <TimePicker Format="HH:mm" />
+                                <Label Text="Hora de fin:" />
+                                <TimePicker Format="HH:mm" />
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout>
+                                <CheckBox IsChecked="false" />
+                                <Label Text="Miércoles" VerticalOptions="Center"/>
+                                <Label Text="Hora de inicio:" />
+                                <TimePicker Format="HH:mm" />
+                                <Label Text="Hora de fin:" />
+                                <TimePicker Format="HH:mm" />
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout>
+                                <CheckBox IsChecked="false" />
+                                <Label Text="Jueves" VerticalOptions="Center"/>
+                                <Label Text="Hora de inicio:" />
+                                <TimePicker Format="HH:mm" />
+                                <Label Text="Hora de fin:" />
+                                <TimePicker Format="HH:mm" />
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout>
+                                <CheckBox IsChecked="false" />
+                                <Label Text="Viernes" VerticalOptions="Center"/>
+                                <Label Text="Hora de inicio:" />
+                                <TimePicker Format="HH:mm" />
+                                <Label Text="Hora de fin:" />
+                                <TimePicker Format="HH:mm" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+
+                    <!-- Botón de Enviar -->
+                    <Button Text="Crear Petición" Grid.Row="4" BackgroundColor="#007AFF" TextColor="White" />
+
+                </Grid>
+            </Frame>
+
+
+            <!-- Navbar Inferior -->
+            <StackLayout BackgroundColor="#EBEBEF" Padding="10" Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Fill">
+                <ImageButton Grid.Column="1"
+                Source="home.png"
+                BackgroundColor="Transparent"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                Margin="0,0,20,0"
+                WidthRequest="12"
+                HeightRequest="12"
+                MinimumWidthRequest="12"
+                MinimumHeightRequest="12"/>
+
+                <ImageButton Grid.Column="1"
+                Source="appointment.png"
+                BackgroundColor="Transparent"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                Margin="0,0,20,0"
+                WidthRequest="12"
+                HeightRequest="12"
+                MinimumWidthRequest="12"
+                MinimumHeightRequest="12"/>
+
+                <ImageButton Grid.Column="1"
+                Source="search.png"
+                BackgroundColor="Transparent"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                Margin="0,0,20,0"
+                WidthRequest="12"
+                HeightRequest="12"
+                MinimumWidthRequest="12"
+                MinimumHeightRequest="12"/>
+
+                <ImageButton Grid.Column="1"
+                Source="user_dark.png"
+                BackgroundColor="Transparent"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                Margin="0,0,20,0"
+                WidthRequest="12"
+                HeightRequest="12"
+                MinimumWidthRequest="12"
+                MinimumHeightRequest="12"/>
+
+            </StackLayout>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
