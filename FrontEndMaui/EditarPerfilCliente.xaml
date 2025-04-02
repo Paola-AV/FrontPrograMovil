@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndMaui.EditarPerfilCliente"
+             Title="EditarPerfilCliente">
+    <ScrollView>
+        <Grid RowDefinitions="Auto, *, Auto">
+            <!-- Navbar Superior -->
+            <Grid Grid.Row="0" BackgroundColor="#EBEBEF" HeightRequest="60">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Sección izquierda: Botón y labels de usuario -->
+                <HorizontalStackLayout Grid.Column="0" Spacing="10" Padding="20,0,0,0" VerticalOptions="Center" HorizontalOptions="Start">
+                    <ImageButton Source="user.png"
+           BackgroundColor="Transparent"
+           VerticalOptions="Center" 
+           WidthRequest="30"
+           HeightRequest="30"/>
+                    <VerticalStackLayout VerticalOptions="Center">
+                        <Label Text="Maria Torres" FontSize="10" />
+                        <Label Text="Heredia, Cr" FontSize="10" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+                <!-- Botón de notificación a la derecha -->
+                <ImageButton Grid.Column="1"
+       Source="bell.png"
+       BackgroundColor="Transparent"
+       HorizontalOptions="End"
+       VerticalOptions="Center"
+       Margin="0,0,20,0"
+       WidthRequest="12"
+       HeightRequest="12"
+       MinimumWidthRequest="12"
+       MinimumHeightRequest="12"/>
+            </Grid>
+
+
+            <!-- Cuadro perfil-->
+            <Frame>
+                <VerticalStackLayout>
+                    <Image Source="user.png"></Image>
+                    <Label x:Name="LblNombre" Text=""></Label>
+                    <HorizontalStackLayout>
+                        <Label Text="Dirección"></Label>
+                        <Label x:Name="lblDireción"></Label>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Señas"></Label>
+                        <Entry x:Name="inputSenia"></Entry>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Número De Casa"></Label>
+                        <Entry x:Name="inputNumCasa"></Entry>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Teléfono"></Label>
+                        <Entry x:Name="inputTelefono"></Entry>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Email"></Label>
+                        <Entry x:Name="inputEmail"></Entry>
+                    </HorizontalStackLayout>
+
+                    <Button Text="Guardar Cambios"></Button>
+                </VerticalStackLayout>
+            </Frame>
+
+
+            <!-- Navbar Inferior -->
+            <StackLayout BackgroundColor="#EBEBEF" Padding="10" Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Fill">
+                <ImageButton Grid.Column="1"
+       Source="home.png"
+       BackgroundColor="Transparent"
+       HorizontalOptions="FillAndExpand"
+       VerticalOptions="Center"
+       Margin="0,0,20,0"
+       WidthRequest="12"
+       HeightRequest="12"
+       MinimumWidthRequest="12"
+       MinimumHeightRequest="12"/>
+
+                <ImageButton Grid.Column="1"
+       Source="appointment.png"
+       BackgroundColor="Transparent"
+       HorizontalOptions="FillAndExpand"
+       VerticalOptions="Center"
+       Margin="0,0,20,0"
+       WidthRequest="12"
+       HeightRequest="12"
+       MinimumWidthRequest="12"
+       MinimumHeightRequest="12"/>
+
+                <ImageButton Grid.Column="1"
+       Source="search.png"
+       BackgroundColor="Transparent"
+       HorizontalOptions="FillAndExpand"
+       VerticalOptions="Center"
+       Margin="0,0,20,0"
+       WidthRequest="12"
+       HeightRequest="12"
+       MinimumWidthRequest="12"
+       MinimumHeightRequest="12"/>
+
+                <ImageButton Grid.Column="1"
+       Source="user_dark.png"
+       BackgroundColor="Transparent"
+       HorizontalOptions="FillAndExpand"
+       VerticalOptions="Center"
+       Margin="0,0,20,0"
+       WidthRequest="12"
+       HeightRequest="12"
+       MinimumWidthRequest="12"
+       MinimumHeightRequest="12"/>
+
+            </StackLayout>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

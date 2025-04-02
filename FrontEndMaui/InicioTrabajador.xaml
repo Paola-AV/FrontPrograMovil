@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndMaui.InicioTrabajador"
+             Title="InicioTrabajador">
+    <ScrollView>
+        <Grid RowDefinitions="Auto, *, Auto">
+            <!-- Navbar Superior -->
+            <Grid Grid.Row="0" BackgroundColor="#EBEBEF" HeightRequest="60">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Sección izquierda: Botón y labels de usuario -->
+                <HorizontalStackLayout Grid.Column="0" Spacing="10" Padding="20,0,0,0" VerticalOptions="Center" HorizontalOptions="Start">
+                    <ImageButton Source="user.png"
+                BackgroundColor="Transparent"
+                VerticalOptions="Center" 
+                WidthRequest="30"
+                HeightRequest="30"/>
+                    <VerticalStackLayout VerticalOptions="Center">
+                        <Label Text="Maria Torres" FontSize="10" />
+                        <Label Text="Heredia, Cr" FontSize="10" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+                <!-- Botón de notificación a la derecha -->
+                <ImageButton Grid.Column="1"
+            Source="bell.png"
+            BackgroundColor="Transparent"
+            HorizontalOptions="End"
+            VerticalOptions="Center"
+            Margin="0,0,20,0"
+            WidthRequest="12"
+            HeightRequest="12"
+            MinimumWidthRequest="12"
+            MinimumHeightRequest="12"/>
+            </Grid>
+
+            <!-- Grid de Servicios -->
+            <Grid RowSpacing="10" ColumnSpacing="10" Padding="20" Grid.Row="1">
+
+                <!-- Servicio 1 -->
+                <Frame Grid.Row="0"  BackgroundColor="LightGray" CornerRadius="10" HasShadow="True" Padding="10" x:Name="plomeria" >
+                    <Frame.Shadow>
+                        <Shadow Brush="Black"
+                    Offset="6,6"
+                    Radius="5"
+                    Opacity="1" />
+                    </Frame.Shadow>
+                    <HorizontalStackLayout Spacing="5" HorizontalOptions="Center">
+                        <Image Source="tools.png" WidthRequest="40" HeightRequest="40" Aspect="AspectFit" HorizontalOptions="Center"/>
+                        <Label Text="Tus Trabajos" HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
+                    </HorizontalStackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <!-- Servicio 2 -->
+                <Frame Grid.Row="0" BackgroundColor="LightGray" CornerRadius="10" HasShadow="True" Padding="10">
+                    <HorizontalStackLayout Spacing="5" HorizontalOptions="Center">
+                        <Image Source="portfolio.png" WidthRequest="40" HeightRequest="40" Aspect="AspectFit" HorizontalOptions="Center"/>
+                        <Label Text="Nuevos Trabajos" HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
+                    </HorizontalStackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+            </Grid>
+
+            <!-- Navbar Inferior -->
+            <StackLayout BackgroundColor="#EBEBEF" Padding="10" Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Fill">
+                <ImageButton Grid.Column="1"
+            Source="home.png"
+            BackgroundColor="Transparent"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center"
+            Margin="0,0,20,0"
+            WidthRequest="12"
+            HeightRequest="12"
+            MinimumWidthRequest="12"
+            MinimumHeightRequest="12"/>
+
+                <ImageButton Grid.Column="1"
+            Source="appointment.png"
+            BackgroundColor="Transparent"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center"
+            Margin="0,0,20,0"
+            WidthRequest="12"
+            HeightRequest="12"
+            MinimumWidthRequest="12"
+            MinimumHeightRequest="12"/>
+
+                <ImageButton Grid.Column="1"
+            Source="search.png"
+            BackgroundColor="Transparent"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center"
+            Margin="0,0,20,0"
+            WidthRequest="12"
+            HeightRequest="12"
+            MinimumWidthRequest="12"
+            MinimumHeightRequest="12"/>
+
+                <ImageButton Grid.Column="1"
+            Source="user_dark.png"
+            BackgroundColor="Transparent"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center"
+            Margin="0,0,20,0"
+            WidthRequest="12"
+            HeightRequest="12"
+            MinimumWidthRequest="12"
+            MinimumHeightRequest="12"/>
+
+            </StackLayout>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

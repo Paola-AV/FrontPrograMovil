@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndMaui.ListaTiquetes"
+             Title="ListaTiquetes">
+    <ScrollView>
+        <Grid RowDefinitions="Auto, *, Auto">
+            <!-- Navbar Superior -->
+            <Grid Grid.Row="0" BackgroundColor="#EBEBEF" HeightRequest="60">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Sección izquierda: Botón y labels de usuario -->
+                <HorizontalStackLayout Grid.Column="0" Spacing="10" Padding="20,0,0,0" VerticalOptions="Center" HorizontalOptions="Start">
+                    <ImageButton Source="user.png"
+                 BackgroundColor="Transparent"
+                 VerticalOptions="Center" 
+                 WidthRequest="30"
+                 HeightRequest="30"/>
+                    <VerticalStackLayout VerticalOptions="Center">
+                        <Label Text="Maria Torres" FontSize="10" />
+                        <Label Text="Heredia, Cr" FontSize="10" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+                <!-- Botón de notificación a la derecha -->
+                <ImageButton Grid.Column="1"
+             Source="bell.png"
+             BackgroundColor="Transparent"
+             HorizontalOptions="End"
+             VerticalOptions="Center"
+             Margin="0,0,20,0"
+             WidthRequest="12"
+             HeightRequest="12"
+             MinimumWidthRequest="12"
+             MinimumHeightRequest="12"/>
+            </Grid>
+
+            
+           <!-- lista de tiquetes falta ponerle el cancelar-->
+            <CollectionView  x:Name="miCollectionView"
+                   SelectionMode="Multiple">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame Margin="20"
+                         BorderColor="Azure"
+                         CornerRadius="5"
+                         HasShadow="True"
+                         HeightRequest="100"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <VerticalStackLayout Grid.Column="0">
+                                        <Label
+                                            x:Name="lblServicio"
+                                            FontSize="15"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalTextAlignment="Center"
+                                            Text="{Binding servicio}"/>
+                                        <Label
+                                            x:Name="lblSubcategoria"
+                                            FontSize="15"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalTextAlignment="Center"
+                                            Text="{Binding subCategoria}"/>
+                                        <Label
+                                            x:Name="lblEncargado"
+                                            FontSize="15"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalTextAlignment="Center"
+                                            Text="{Binding encargado}"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout Grid.Column="1">
+                                        <Label
+                                            x:Name="lblFecha"
+                                            FontSize="15"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalTextAlignment="Center"
+                                            Text="{Binding fecha}"/>
+                                        <Label
+                                            x:Name="lblHora"
+                                            FontSize="15"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalTextAlignment="Center"
+                                            Text="{Binding hora}"/>
+                                        <Label
+                                            x:Name="lblEmpresa"
+                                            FontSize="15"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalTextAlignment="Center"
+                                            Text="{Binding empresa}"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                               
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+            <!-- Navbar Inferior -->
+            <StackLayout BackgroundColor="#EBEBEF" Padding="10" Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Fill">
+                <ImageButton Grid.Column="1"
+             Source="home.png"
+             BackgroundColor="Transparent"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"
+             Margin="0,0,20,0"
+             WidthRequest="12"
+             HeightRequest="12"
+             MinimumWidthRequest="12"
+             MinimumHeightRequest="12"/>
+
+                <ImageButton Grid.Column="1"
+             Source="appointment.png"
+             BackgroundColor="Transparent"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"
+             Margin="0,0,20,0"
+             WidthRequest="12"
+             HeightRequest="12"
+             MinimumWidthRequest="12"
+             MinimumHeightRequest="12"/>
+
+                <ImageButton Grid.Column="1"
+             Source="search.png"
+             BackgroundColor="Transparent"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"
+             Margin="0,0,20,0"
+             WidthRequest="12"
+             HeightRequest="12"
+             MinimumWidthRequest="12"
+             MinimumHeightRequest="12"/>
+
+                <ImageButton Grid.Column="1"
+             Source="user_dark.png"
+             BackgroundColor="Transparent"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"
+             Margin="0,0,20,0"
+             WidthRequest="12"
+             HeightRequest="12"
+             MinimumWidthRequest="12"
+             MinimumHeightRequest="12"/>
+
+            </StackLayout>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

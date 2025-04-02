@@ -5,208 +5,42 @@
 
     <ScrollView>
         <Grid RowDefinitions="Auto, *, Auto">
-            <!-- Navbar Superior -->
-            <Grid Grid.Row="0" BackgroundColor="#EBEBEF" HeightRequest="60">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
+            <Frame Grid.Row="0">
+                <VerticalStackLayout>
+                    <Image Source="renovation.png"
+                        WidthRequest="30"
+                        HeightRequest="30"></Image>
+                    <Label Text="Inicia Sesion"></Label>
+                </VerticalStackLayout>
+            </Frame>
 
-                <!-- Sección izquierda: Botón y labels de usuario -->
-                <HorizontalStackLayout Grid.Column="0" Spacing="10" Padding="20,0,0,0" VerticalOptions="Center" HorizontalOptions="Start">
-                    <ImageButton Source="user.png"
-                    BackgroundColor="Transparent"
-                    VerticalOptions="Center" 
-                    WidthRequest="30"
-                    HeightRequest="30"/>
-                    <VerticalStackLayout VerticalOptions="Center">
-                        <Label Text="Maria Torres" FontSize="10" />
-                        <Label Text="Heredia, Cr" FontSize="10" />
-                    </VerticalStackLayout>
-                </HorizontalStackLayout>
 
-                <!-- Botón de notificación a la derecha -->
-                <ImageButton Grid.Column="1"
-                Source="bell.png"
-                BackgroundColor="Transparent"
-                HorizontalOptions="End"
-                VerticalOptions="Center"
-                Margin="0,0,20,0"
-                WidthRequest="12"
-                HeightRequest="12"
-                MinimumWidthRequest="12"
-                MinimumHeightRequest="12"/>
-            </Grid>
-
-            <!-- Grid de Servicios -->
-            <Grid RowSpacing="10" ColumnSpacing="10" Padding="20" Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-
-                <!-- Servicio 1 -->
-                <!-- Servicio 1 -->
-                <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="LightGray" CornerRadius="10" HasShadow="True" Padding="10" x:Name="plomeria" >
-                    <Frame.Shadow>
-                        <Shadow Brush="Black"
-                        Offset="6,6"
-                        Radius="5"
-                        Opacity="1" />
-                    </Frame.Shadow>
-                    <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
-                        <Image Source="water_tap.png" WidthRequest="40" HeightRequest="40" Aspect="AspectFit" HorizontalOptions="Center"/>
-                        <Label Text="Plomería" HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
-                    </VerticalStackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                    </Frame.GestureRecognizers>
-                </Frame>
-
-                <!-- Servicio 2 -->
-                <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="LightGray" CornerRadius="10" HasShadow="True" Padding="10">
-                    <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
-                        <Image Source="plug.png" WidthRequest="40" HeightRequest="40" Aspect="AspectFit" HorizontalOptions="Center"/>
-                        <Label Text="Electricidad" HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
-                    </VerticalStackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                    </Frame.GestureRecognizers>
-                </Frame>
-
-                <!-- Servicio 3 -->
-                <Frame Grid.Row="0" Grid.Column="2" BackgroundColor="LightGray" CornerRadius="10" HasShadow="True" Padding="10">
-                    <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
-                        <Image Source="electrical_appliances.png" WidthRequest="40" HeightRequest="40" Aspect="AspectFit" HorizontalOptions="Center"/>
-                        <Label Text="Electrodomésticos" HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
-                    </VerticalStackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                    </Frame.GestureRecognizers>
-                </Frame>
-
-                <!-- Servicio 4 -->
-                <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="LightGray" CornerRadius="10" HasShadow="True" Padding="10">
-                    <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
-                        <Image Source="tools.png" WidthRequest="40" HeightRequest="40" Aspect="AspectFit" HorizontalOptions="Center"/>
-                        <Label Text="Carpintería" HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
-                    </VerticalStackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                    </Frame.GestureRecognizers>
-                </Frame>
-
-                <!-- Servicio 5 -->
-                <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="LightGray" CornerRadius="10" HasShadow="True" Padding="10">
-                    <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
-                        <Image Source="sweeping.png" WidthRequest="40" HeightRequest="40" Aspect="AspectFit" HorizontalOptions="Center"/>
-                        <Label Text="Limpieza" HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
-                    </VerticalStackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                    </Frame.GestureRecognizers>
-                </Frame>
-
-                <!-- Servicio 6 -->
-                <Frame Grid.Row="1" Grid.Column="2" BackgroundColor="LightGray" CornerRadius="10" HasShadow="True" Padding="10">
-                    <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
-                        <Image Source="sprout.png" WidthRequest="40" HeightRequest="40" Aspect="AspectFit" HorizontalOptions="Center"/>
-                        <Label Text="Jardinería" HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
-                    </VerticalStackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                    </Frame.GestureRecognizers>
-                </Frame>
-
-                <!-- Servicio 7 -->
-                <Frame Grid.Row="2" Grid.Column="0" BackgroundColor="LightGray" CornerRadius="10" HasShadow="True" Padding="10">
-                    <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
-                        <Image Source="key.png" WidthRequest="40" HeightRequest="40" Aspect="AspectFit" HorizontalOptions="Center"/>
-                        <Label Text="Cerrajería" HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
-                    </VerticalStackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                    </Frame.GestureRecognizers>
-                </Frame>
-
-                <!-- Servicio 8 -->
-                <Frame Grid.Row="2" Grid.Column="1" BackgroundColor="LightGray" CornerRadius="10" HasShadow="True" Padding="10">
-                    <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
-                        <Image Source="paint_brush.png" WidthRequest="40" HeightRequest="40" Aspect="AspectFit" HorizontalOptions="Center"/>
-                        <Label Text="Pintura" HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
-                    </VerticalStackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                    </Frame.GestureRecognizers>
-                </Frame>
-
-                <!-- Servicio 9 -->
-                <Frame Grid.Row="2" Grid.Column="2" BackgroundColor="LightGray" CornerRadius="10" HasShadow="True" Padding="10">
-                    <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
-                        <Image Source="support.png" WidthRequest="40" HeightRequest="40" Aspect="AspectFit" HorizontalOptions="Center"/>
-                        <Label Text="General" HorizontalOptions="Center" VerticalOptions="Center" FontSize="10"/>
-                    </VerticalStackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                    </Frame.GestureRecognizers>
-                </Frame>
-            </Grid>
-
-            <!-- Navbar Inferior -->
-            <StackLayout BackgroundColor="#EBEBEF" Padding="10" Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Fill">
-                <ImageButton Grid.Column="1"
-                Source="home.png"
-                BackgroundColor="Transparent"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="Center"
-                Margin="0,0,20,0"
-                WidthRequest="12"
-                HeightRequest="12"
-                MinimumWidthRequest="12"
-                MinimumHeightRequest="12"/>
-
-                <ImageButton Grid.Column="1"
-                Source="appointment.png"
-                BackgroundColor="Transparent"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="Center"
-                Margin="0,0,20,0"
-                WidthRequest="12"
-                HeightRequest="12"
-                MinimumWidthRequest="12"
-                MinimumHeightRequest="12"/>
-
-                <ImageButton Grid.Column="1"
-                Source="search.png"
-                BackgroundColor="Transparent"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="Center"
-                Margin="0,0,20,0"
-                WidthRequest="12"
-                HeightRequest="12"
-                MinimumWidthRequest="12"
-                MinimumHeightRequest="12"/>
-
-                <ImageButton Grid.Column="1"
-                Source="user_dark.png"
-                BackgroundColor="Transparent"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="Center"
-                Margin="0,0,20,0"
-                WidthRequest="12"
-                HeightRequest="12"
-                MinimumWidthRequest="12"
-                MinimumHeightRequest="12"/>
-
-            </StackLayout>
-
+            <Frame BackgroundColor="#F5F7FB">
+                <VerticalStackLayout>
+                    
+                    <Label Text="Correo"/>
+                    
+                    <Entry
+                        x:Name="txtCorreo"/>
+                    
+                    <Label Text="Contraseña"/>
+                    
+                    <Entry
+                        x:Name="txtPassword"/>
+                    
+                    <Button
+                       Text="Ingresar"
+                       x:Name="btnIngresar"
+                       BackgroundColor="#ACD5E8"
+                       Clicked="btnIngresar_Clicked"/>
+                    
+                    <Button
+                        Text="Registarse"
+                        x:Name="btnRegistrarse"
+                        BackgroundColor="#ACD5E8"
+                        Clicked="btnRegistrarse_Clicked"/>
+                </VerticalStackLayout>
+            </Frame>
         </Grid>
     </ScrollView>
 

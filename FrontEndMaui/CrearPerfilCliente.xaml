@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndMaui.CrearPerfilCliente"
+             Title="CrearPerfilCliente">
+    <ScrollView>
+        <Grid RowDefinitions="Auto, *, Auto">
+            <Frame Grid.Row="0">
+                <VerticalStackLayout>
+                    <Label Text="Crea tu perfil"></Label>
+                </VerticalStackLayout>
+            </Frame>
+
+
+            <Frame BackgroundColor="#F5F7FB">
+                <VerticalStackLayout>
+                    <Label Text="Nombre"/>
+
+                    <Entry x:Name="txtNombre"/>
+
+                    <Label Text="Apellidos"/>
+
+                    <Entry x:Name="txtApellidos"/>
+
+                    <Label Text="Correo"/>
+
+                    <Entry x:Name="txtCorreo"/>
+
+                    <Label Text="Teléfono"/>
+
+                    <Entry x:Name="txtTelefono"/>
+
+                    <Label Text="Dirección"/>
+
+                    <Entry x:Name="txtDireccion"/>
+
+                    <Label Text="Señas"/>
+
+                    <Entry x:Name="txtSenias"/>
+
+                    <Label Text="Contraseña"/>
+
+                    <Entry
+                     x:Name="txtPassword"/>
+
+                    <Label Text="Confirmar contraseña"/>
+
+                    <Entry
+                     x:Name="txtPasswordConfirm"/>
+
+                    <Button
+                    Text="Ingresar"
+                    x:Name="btnIngresar"
+                    BackgroundColor="#ACD5E8"
+                    Clicked="btnIngresar_Clicked"/>
+
+                    <Button
+                     Text="Registarse"
+                     x:Name="btnRegistrarse"
+                     BackgroundColor="#ACD5E8"
+                     Clicked="btnRegistrarse_Clicked"/>
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+    </ScrollView>
+</ContentPage>

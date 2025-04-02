@@ -11,7 +11,31 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="CrearCitaTrabajador.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="CrearPerfilCliente.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="EditarPerfilCliente.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="FormularioPeticion.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="InicioCliente.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="InicioTrabajador.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="ListaTiquetes.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="NuevosTrabajoTrabajador.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="PerfilCliente.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>
